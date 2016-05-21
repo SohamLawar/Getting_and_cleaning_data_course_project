@@ -1,3 +1,5 @@
+
+## Section 1
 library(plyr)
 filename <- "dataset.zip"
 ## Download and unzip the dataset
@@ -10,7 +12,7 @@ if (!file.exists("UCI HAR Dataset")) {
 }
 
 
-
+## Section 2
 # Read data from files
 features     <- read.table('UCI HAR Dataset/features.txt',header=FALSE) 
 activityType <- read.table('UCI HAR Dataset/activity_labels.txt',header=FALSE) 
@@ -18,11 +20,15 @@ subjectTrain <- read.table('UCI HAR Dataset/train/subject_train.txt',header=FALS
 
 #extract features which contains mean and standard deviation
 featuresWanted <- grep(".*mean.*|.*std.*", features[,2])
+
+## Section 3
+
 featuresWanted.names <- features[featuresWanted,2]
 featuresWanted.names = gsub('-mean', 'Mean', featuresWanted.names)
 featuresWanted.names = gsub('-std', 'Std', featuresWanted.names)
 featuresWanted.names <- gsub('[-()]', '', featuresWanted.names)
 
+## Section 4
 xTrain       <- read.table('UCI HAR Dataset/train/X_train.txt',header=FALSE)[featuresWanted] 
 yTrain       <- read.table('UCI HAR Dataset/train/y_train.txt',header=FALSE) 
 
@@ -44,14 +50,14 @@ colnames(yTest)       <- "activityId"
 #training data
 trainingData <- cbind(yTrain,subjectTrain,xTrain)
 
-#testing set
+#testing data
 testData <- cbind(yTest,subjectTest,xTest)
 
 
 #Merge data
 finalData <- rbind(trainingData,testData)
 
-
+## Section 5
 # Create a second, independent tidy data set with the average of each variable
 # for each activity and each subject
 # first two columns (activity & subject)
