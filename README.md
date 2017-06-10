@@ -1,5 +1,5 @@
 # Getting-and-Cleaning-Data-Course-Project
-This is course project for 'Getting and Cleaning Data' course by  Johns Hopkins University which is available on coursera.
+This is course project for 'Getting and Cleaning Data' course by Johns Hopkins University which is available on coursera.
 ##Input Data Set
 Full description abot input data set is available at [The UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 Input data set can be found [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
