@@ -1,5 +1,5 @@
 #Description
-This file provides an additional information about the code and functions used in R script `run_analysis.R`. 
+This file provides an additional information about the code and functions used in R script ` run_analysis.R `. 
 There are 5 important sections in the script. 
 
 ## Section 1
